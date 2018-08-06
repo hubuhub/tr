@@ -3,7 +3,7 @@ reviews:
   name: "/forum31"
   
   # we enable moderation, Pull Request will be created for every review
-  moderation: false
+  moderation: true
   
   # they contain a name, a review note, a text message and a field to associate the review to a product
   allowedFields: ["name", "messsage", "review", "product", "comment"]
