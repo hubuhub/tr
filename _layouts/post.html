@@ -26,11 +26,11 @@ layout: default
   <!-- with options[redirect], our visitor will come back to our website when submitting a review -->
   <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
   
-  <h4>Add a comment</h4>
+  <h4>Оставить мнение</h4>
   <!-- and finally the user visible fields -->
-  <p><label>Your name: <input type="text" name="fields[name]" /></label></p>
-  <textarea rows="5" cols="35" name="fields[comment]" placeholder="Type your text here"></textarea>
-  <p><button type="submit">Go</button></p>
+  <p><label>Имя: <input type="text" name="fields[name]" /></label></p>
+  <textarea rows="5" cols="35" name="fields[comment]" placeholder="Текст вашего комментария"></textarea>
+  <p><button type="submit">Отправить</button></p>
 </form>
   
   {% assign reviews = site.data.reviews | where:'product',page.slug %}
@@ -40,7 +40,7 @@ layout: default
   {% assign sum = sum | plus: review.review %}
 {% endfor %}
 
-<h3>Comments</h3>
+<h3>Обсуждение:</h3>
   
       {% for review in reviews %}
 <ul>
