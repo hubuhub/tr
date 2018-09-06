@@ -11,48 +11,7 @@ layout: default
   </div>
 
   <div class="date">
-    Written on {{ page.date | date: "%B %e, %Y" }}
+    Написано {{ page.date | date: "%B %e, %Y" }}
   </div>
-
-  {% include disqus.html %}
-  
-  
-<!-- Staticman -->
-<form method="POST"
-      action="https://api.staticman.net/v2/entry/hubuhub/forum31/master/reviews"
-      oninput="result.value=parseInt(this['fields[review]'].value)">
-  <!-- The review will be associated with the current product -->
-  <input name="fields[product]" type="hidden" value="{{ page.slug }}" />
-  <!-- with options[redirect], our visitor will come back to our website when submitting a review -->
-  <input name="options[redirect]" type="hidden" value="{{site.url}}{{site.baseurl}}{{ page.url }}" />
-  
-  <h4>Оставить мнение</h4>
-  <!-- and finally the user visible fields -->
-  <p><label>Имя: <input type="text" name="fields[name]" /></label></p>
-  <textarea rows="5" cols="35" name="fields[comment]" placeholder="Текст вашего комментария"></textarea>
-  <p><button type="submit">Отправить</button></p>
-</form>
-  
-  {% assign reviews = site.data.reviews | where:'product',page.slug %}
-{% assign reviewCount = reviews | size %}
-{% assign sum = 0 %}
-{% for review in reviews %}
-  {% assign sum = sum | plus: review.review %}
-{% endfor %}
-
-<h3>Обсуждение:</h3>
-  
-      {% for review in reviews %}
-<ul>
-  <li>
-    <p><b>{{ review.name }}</b> on <i>{{ review.date | date: '%B %d, %Y' }}</i></p>
-    {% if review.comment %}
-    <p>
-      {{review.comment}}
-    </p>
-    {% endif %}
-  </li>
-  {% endfor %}
-</ul>
   
 </article>
