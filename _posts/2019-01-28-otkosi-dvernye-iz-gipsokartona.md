@@ -1,8 +1,8 @@
 ---
 layout: post 
-title: Откосы дверные из гипсокартона | TR
+title: Откосы дверные из гипсокартона
 description: Читайте в статье, как сделать откосы дверные из гиспокартона своими руками | TR
-photobg: '/images/nowy-2019.jpg'
+photobg: '/images/otkosi-is-gipsokartona.jpg'
 breadtitle: 'Откосы дверные из гипсокартона'
 heading: 'Откосы дверные из гипсокартона'
 
