@@ -24,11 +24,32 @@
           <div class="site-info">
           </div>
           
+         <div align="right">
+            		      <!-- Html Elements for Search -->
+<div id="search-container">
+<input type="text" id="search-input" placeholder="Введите вопрос...">
+</div> 
+</div>
+          
         </header>
       </div>
     </div>
 
     <div id="main" role="main" class="container">
+       <ul id="results-container"></ul>
+	
+<!-- Script pointing to search-script.js -->
+<script src="/search-script.js" type="text/javascript"></script>
+
+<!-- Configuration -->
+<script>
+SimpleJekyllSearch({
+  searchInput: document.getElementById('search-input'),
+  resultsContainer: document.getElementById('results-container'),
+  searchResultTemplate: '<h2><a href="{url}">{title}</a></h2><span>{date}</span>',
+  json: '/search.json'
+})
+</script>
       {{ content }}
     </div>
 
